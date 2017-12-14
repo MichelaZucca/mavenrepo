@@ -14,9 +14,9 @@ Ce projet explique comment déployer une librairie maven open source sur un repo
 5. Ajoutez 2 dossiers à la racine du repo github nommez `releases`et `snapshots`, le premier utilisé pour les versions final de votre librairies, le second pour la version en cours de développement (attention cela ne veut pas dire qu'elle ne doit pas être fonctionnelle).
 6. A hauteur de votre `.jar` exécutez la commande suivante : 
 ```
-mvn deploy:deploy-file -DgroupId=groupIdTest -DartifactId=artifactIdTest -Dversion=0.0.1 -Dpackaging=jar -Dfile="artifactIdTest-0.0.1.jar"  -Durl=file:<votre path>/mavenrepo/releases
+mvn deploy:deploy-file -DgroupId=groupIdTest -DartifactId=artifactIdTest -Dversion=0.0.1 -Dpackaging=jar -Dfile="artifactIdTest-0.0.1.jar"  -Durl=file:<YOUR_PATH>/mavenrepo/releases
 ```
-7. Faite de même avec `mavenrepo/snapshots` ou copiez-collez simplement le contenu de `releases` dans `snapshots`. Faites un add et commit de vos fichiers, et faites un push.
+7. Faite de même avec `snapshots` ou copiez-collez simplement le contenu de `releases` dans `snapshots`. Faites un add et commit de vos fichiers, et faites un push.
 ```
 git add .
 git commit -m "First deployment"
@@ -37,8 +37,8 @@ Allez dans votre nouveau projet maven et ouvrez le `pom.xml` et ajoutez ces quel
 
     <repositories>
         <repository>
-            <id>groupTest</id>
-            <url>https://raw.github.com/MichelaZucca/groupIdTest/releases/</url>
+            <id>groupIdTest</id>
+            <url>https://raw.github.com/<YOUR_USER_NAME>/groupIdTest/releases/</url>
         </repository>
     </repositories>
 ```
