@@ -1,5 +1,5 @@
 # mavenrepo
-Ce projet explique comment déployer une librairie maven open source sur un repo Github. Et comment le récupérer dans un autre projet.
+Ce projet explique comment déployer une librairie maven open source sur un repo Github. Et comment la récupérer dans un autre projet.
 
 ## Mettre à disposition une librairie
 1. Dans le projet que vous souhaitez exporter ouvrez le fichier `pom.xml` et complétez les informations suivantes `groupeId`, `artifactId` et `version`. Elles seront utilisées plus loin pour indiquer la dépendance que vous souhaitez récupérer dans votre nouveau projet maven.
